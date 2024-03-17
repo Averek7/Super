@@ -18,3 +18,30 @@ Your tasks will involve:
 
 Ensure that your application is well-structured, follows best practices, and adheres to any guidelines provided in the problem statement.
 
+## Steps:
+1. Manually added the models to the database
+2. Inserted test values into the database
+
+## Schema
+-- Create Customers table
+CREATE TABLE Customers (
+    customer_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
+
+-- Create Transactions table
+CREATE TABLE Transactions (
+    transaction_id SERIAL PRIMARY KEY,
+    customer_id INT NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create PaymentMethods table
+CREATE TABLE PaymentMethods (
+    payment_method_id SERIAL PRIMARY KEY,
+    transaction_id INT NOT NULL,
+    method_type VARCHAR(50) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL
+);

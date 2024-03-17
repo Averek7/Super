@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended: true}));
 
 
 //routes
-app.use('/api', require('./routes/api'))
+app.use('/', require('./routes/api'))
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Super App');
