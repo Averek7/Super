@@ -1,6 +1,4 @@
-# Super
-
-# Node.js Express Application Development Task
+# Super Node.js Express Application Development 
 
 ## Overview
 The task requires you to develop a functional Node.js Express application, utilizing Postgres as the database and Jest for automated testing. You'll receive a problem statement via email just before your designated time-slot. Ensure that you're equipped with all the prerequisites for completing the task.
